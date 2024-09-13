@@ -841,6 +841,15 @@ register_model_group(
     template="cpm3",
 )
 
+register_model_group(
+    models={
+        "miniG-9B-Chat": {
+            DownloadSource.DEFAULT: "CausalLM/miniG",
+            DownloadSource.MODELSCOPE: "AI-ModelScope/miniG",
+        },
+    },
+    template="miniG",
+)
 
 register_model_group(
     models={
