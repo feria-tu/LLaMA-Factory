@@ -116,7 +116,6 @@ def register_model_group(
 ) -> None:
     prefix = None
     for name, path in models.items():
-        print(name,prefix)
         if prefix is None:
             prefix = name.split("-")[0]
         else:
