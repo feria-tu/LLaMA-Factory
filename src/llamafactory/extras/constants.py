@@ -116,7 +116,7 @@ def register_model_group(
 ) -> None:
     prefix = None
     for name, path in models.items():
-        print(name,path,prefix)
+        print(name,prefix)
         if prefix is None:
             prefix = name.split("-")[0]
         else:
@@ -802,6 +802,15 @@ register_model_group(
     template="llama3",
 )
 
+register_model_group(
+    models={
+        "miniG-9B-Chat": {
+            DownloadSource.DEFAULT: "CausalLM/miniG",
+            DownloadSource.MODELSCOPE: "AI-ModelScope/miniG",
+        },
+    },
+    template="miniG",
+)
 
 register_model_group(
     models={
@@ -840,16 +849,6 @@ register_model_group(
         },
     },
     template="cpm3",
-)
-
-register_model_group(
-    models={
-        "miniG-9B-Chat": {
-            DownloadSource.DEFAULT: "CausalLM/miniG",
-            DownloadSource.MODELSCOPE: "AI-ModelScope/miniG",
-        },
-    },
-    template="miniG",
 )
 
 register_model_group(
