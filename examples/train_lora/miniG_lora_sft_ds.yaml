@@ -8,7 +8,7 @@ finetuning_type: lora
 lora_target: query_key_value
 
 ### dataset
-dataset: alpaca_en_demo
+dataset: chatglm3_zh
 template: miniG
 cutoff_len: 1024
 max_samples: 1000
