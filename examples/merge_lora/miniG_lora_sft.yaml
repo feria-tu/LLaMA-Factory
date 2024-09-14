@@ -5,7 +5,7 @@ template: miniG
 finetuning_type: lora
 
 ### export
-export_dir: models/llama3_lora_sft
+export_dir: models/miniG_lora_sft
 export_size: 2
 export_device: cpu
 export_legacy_format: false
