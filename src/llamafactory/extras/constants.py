@@ -1045,6 +1045,15 @@ register_model_group(
     template="phi",
 )
 
+register_model_group(
+    models={
+        "Phi-3.5-mini-instruct": {
+            DownloadSource.DEFAULT: "microsoft/Phi-3.5-mini-instruct",
+            DownloadSource.MODELSCOPE: "LLM-Research/Phi-3.5-mini-instruct",
+        },
+    },
+    template="phi3",
+)
 
 register_model_group(
     models={

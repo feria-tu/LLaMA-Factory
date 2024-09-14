@@ -832,6 +832,15 @@ _register_template(
     replace_eos=True,
 )
 
+_register_template(
+    name="phi3",
+    format_user=StringFormatter(slots=["<|user|>\n{{content}}<|end|>\n<|assistant|>\n"]),
+    format_system=StringFormatter(slots=["<|system|>\n{{content}}<|end|>\n"]),
+    format_separator=EmptyFormatter(slots=["\n"]),
+    format_prefix=EmptyFormatter(slots=[{"bos_token"}]),
+    stop_words=["<|end|>"],
+    replace_eos=True,
+)
 
 _register_template(
     name="qwen",
