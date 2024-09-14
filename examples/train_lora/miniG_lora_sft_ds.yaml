@@ -8,7 +8,7 @@ finetuning_type: lora
 lora_target: query_key_value
 
 ### dataset
-dataset: identity,alpaca_en_demo
+dataset: alpaca_en_demo
 template: miniG
 cutoff_len: 1024
 max_samples: 1000
