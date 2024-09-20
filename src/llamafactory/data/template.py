@@ -680,6 +680,17 @@ _register_template(
     efficient_eos=True,
 )
 
+_register_template(
+    name="miniG",
+    format_user=StringFormatter(slots=["<|user|>\n{{content}}<|assistant|>"]),
+    format_assistant=StringFormatter(slots=["\n{{content}}"]),
+    format_system=StringFormatter(slots=["<|system|>\n{{content}}"]),
+    format_function=FunctionFormatter(slots=[], tool_format="glm4"),
+    format_observation=StringFormatter(slots=["<|observation|>\n{{content}}<|assistant|>"]),
+    format_prefix=EmptyFormatter(slots=["[gMASK]<sop>"]),
+    stop_words=["<|user|>", "<|observation|>"],
+    efficient_eos=True,
+)
 
 _register_template(
     name="intern",
@@ -821,6 +832,15 @@ _register_template(
     replace_eos=True,
 )
 
+_register_template(
+    name="phi3",
+    format_user=StringFormatter(slots=["<|user|>\n{{content}}<|end|>\n<|assistant|>\n"]),
+    format_system=StringFormatter(slots=["<|system|>\n{{content}}<|end|>\n"]),
+    format_separator=EmptyFormatter(slots=["\n"]),
+    format_prefix=EmptyFormatter(slots=[{"bos_token"}]),
+    stop_words=["<|end|>"],
+    replace_eos=True,
+)
 
 _register_template(
     name="qwen",

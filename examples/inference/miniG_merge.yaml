@@ -1,0 +1,4 @@
+model_name_or_path: CausalLM/miniG
+adapter_name_or_path: saves/miniG/lora/sft
+template: miniG
+finetuning_type: lora

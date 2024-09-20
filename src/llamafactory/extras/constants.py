@@ -793,10 +793,23 @@ register_model_group(
             DownloadSource.DEFAULT: "meta-llama/Meta-Llama-3.1-405B-Instruct",
             DownloadSource.MODELSCOPE: "LLM-Research/Meta-Llama-3.1-405B-Instruct",
         },
+        # "Llama3.1-8B-Chinese-Chat": {
+        #     DownloadSource.DEFAULT: "shenzhi-wang/Llama3.1-8B-Chinese-Chat",
+        #     DownloadSource.MODELSCOPE: "XD_AI/Llama3.1-8B-Chinese-Chat",
+        # },
     },
     template="llama3",
 )
 
+register_model_group(
+    models={
+        "miniG-9B-Chat": {
+            DownloadSource.DEFAULT: "CausalLM/miniG",
+            DownloadSource.MODELSCOPE: "AI-ModelScope/miniG",
+        },
+    },
+    template="miniG",
+)
 
 register_model_group(
     models={
@@ -836,7 +849,6 @@ register_model_group(
     },
     template="cpm3",
 )
-
 
 register_model_group(
     models={
@@ -1033,6 +1045,15 @@ register_model_group(
     template="phi",
 )
 
+register_model_group(
+    models={
+        "Phi-3.5-mini-instruct": {
+            DownloadSource.DEFAULT: "microsoft/Phi-3.5-mini-instruct",
+            DownloadSource.MODELSCOPE: "LLM-Research/Phi-3.5-mini-instruct",
+        },
+    },
+    template="phi3",
+)
 
 register_model_group(
     models={

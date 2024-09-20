@@ -1,0 +1,2 @@
+model_name_or_path: CausalLM/miniG
+template: llama3
